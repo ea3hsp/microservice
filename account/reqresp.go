@@ -12,6 +12,6 @@ type (
 		Email string `json:"email"`
 	}
 	GetUserRequest struct {
-		ID string `json"id"`
+		ID string `json:"id"`
 	}
 )
