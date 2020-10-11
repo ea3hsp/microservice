@@ -10,8 +10,8 @@ import (
 	"syscall"
 
 	"github.com/ea3hsp/micro/account"
+	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
-	"github.com/kit-log/kit/log"
 )
 
 func main() {
@@ -34,8 +34,7 @@ func main() {
 	ctx := context.Background()
 	var srv account.Service
 	{
-		repository := account.NewRepo(db, logger)
-
+		repository := account.NewRepo(nil, logger)
 		srv = account.NewService(repository, logger)
 	}
 

@@ -46,6 +46,6 @@ func (s *service) GetUser(ctx context.Context, id string) (string, error) {
 	if err != nil {
 		level.Error(logger).Log("err", err)
 	}
-	logger.Log("Get user", id)
+	logger.Log("id", id)
 	return email, nil
 }
