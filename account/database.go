@@ -8,7 +8,7 @@ import (
 	"github.com/go-kit/kit/log"
 )
 
-var RepoErr = errors.New("Unable to handle Repo Request")
+var ErrRepo = errors.New("Unable to handle Repo Request")
 
 type repo struct {
 	db     *sql.DB
